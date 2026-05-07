@@ -1,0 +1,75 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../src/Assets/Fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: BOLD;
+  src: url(../src/Assets/Fonts/ZenDots-Regular.ttf);
+}
+@font-face {
+  font-family: Grotesk;
+  src: url(../src/Assets/Fonts/HostGrotesk-Regular.ttf);
+}
+@font-face {
+  font-family: Space;
+  src: url(../src/Assets/Fonts/SpaceGrotesk-Bold.ttf);
+}
+
+@import "tailwindcss";
+
+@theme {
+  --font-Poppins: Poppins, "sans-serif";
+  --font-BOLD: BOLD, "sans-serif";
+  --font-Grotesk: Grotesk, "sans-serif";
+  --font-Space: Space, "sans-serif";
+}
+.text-stroke {
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+}
+.bg-trueno-gradient {
+  background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-trueno-gradient::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 40%, rgba(0, 0, 0, 0.6) 100%);
+  /* pointer-events: none; */
+  z-index: -10;
+}
+
+/* Custom text stroke */
+.text-stroke {
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+  transition: all 0.5s ease;
+}
+
+/* Hover effect */
+.hover-effect:hover {
+  color: white; /* Tailwind's purple-500 */
+  -webkit-text-stroke: 0px transparent;
+  transform: scale(1.05);
+  letter-spacing: 0.2em;
+  transition: all 0.5s ease;
+}
+
+/* Optional: Add glow */
+/* .hover-effect:hover {
+  text-shadow: 0 0 10px #a855f7, 0 0 20px #a855f7;
+} */
+
+* {
+  scroll-behavior: smooth;
+  /* cursor: none; */
+  /* pointer-events: none; */
+}
+/* For modern browsers */
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
